@@ -5,6 +5,7 @@ import br.com.kotlinGames.servicos.UseAPI
 import com.google.gson.Gson
 import org.example.br.com.kotlinGames.models.Game
 import org.example.br.com.kotlinGames.models.GameInfo
+import transformToAge
 import java.util.*
 
 fun main() {
@@ -12,6 +13,8 @@ fun main() {
     val gamer = Gamer.createGamer(scan)
     println("Cadastro concluído com sucesso. Dados do gamer:")
     println(gamer)
+    println("Idade do jogador: ${gamer.dateOfBirth?.transformToAge()}")
+
 
     do{
         print("\nDigite um codigo de jogo: ")
